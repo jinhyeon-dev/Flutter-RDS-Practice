@@ -1,4 +1,4 @@
-import 'package:aws_rds_mysql_connection/list.dart';
+import 'package:aws_rds_mysql_connection/screens/member_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:mysql_client/mysql_client.dart';
 
