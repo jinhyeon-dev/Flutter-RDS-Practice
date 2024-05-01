@@ -37,5 +37,22 @@ class MySQLService {
       await conn.close();
     }
   }
+
+  static Future<void> addMember(String id, String name) async {
+    final conn = await _getConnection();
+    try {
+      await conn.connect();
+      await conn.execute(
+        "INSERT INTO memberTable (id, name) VALUES (:id, :name)",
+        {"id": id, "name": name},
+      );
+      print("Member added successfully");
+    } catch (e) {
+      print('Error: $e');
+    } finally {
+      await conn.close();
+    }
+  }
 }
+
 
