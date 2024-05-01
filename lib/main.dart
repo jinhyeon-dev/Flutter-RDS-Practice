@@ -1,3 +1,4 @@
+import 'package:aws_rds_mysql_connection/list.dart';
 import 'package:flutter/material.dart';
 import 'package:mysql_client/mysql_client.dart';
 
@@ -37,6 +38,15 @@ class _AddMemberScreenState extends State<AddMemberScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Add Member'),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => MemberListScreen()),
+          );
+        },
+        child: Icon(Icons.list_alt),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
