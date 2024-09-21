@@ -4,11 +4,11 @@ import 'package:aws_rds_mysql_connection/models/member.dart';
 class MySQLService {
   static Future<MySQLConnection> _getConnection() async {
     return await MySQLConnection.createConnection(
-      host: 'demo.cnyscyowakl3.ap-northeast-2.rds.amazonaws.com',
-      port: 3306,
-      userName: 'admin',
-      password: 'aws-rds-jinhyeon',
-      databaseName: 'demo',
+      host: 'host',
+      port: port,
+      userName: 'name',
+      password: 'password',
+      databaseName: 'databasename',
     );
   }
 
